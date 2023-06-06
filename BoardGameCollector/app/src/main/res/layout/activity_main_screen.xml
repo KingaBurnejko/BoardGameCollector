@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainScreen">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="user_name"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/games_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Liczba posiadanych gier:"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+        <TextView
+            android:id="@+id/games_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="games_count"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/games_details_button"
+            app:layout_constraintEnd_toStartOf="@+id/games_details_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/games_details_button" />
+
+        <Button
+            android:id="@+id/games_details_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="onGamesDetailsButtonClick"
+            android:text="Szczegóły"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/games_count"
+            app:layout_constraintTop_toBottomOf="@+id/games_count_text" />
+
+
+        <TextView
+            android:id="@+id/addon_count_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Liczba posiadanych dodatków:"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/games_details_button" />
+
+        <TextView
+            android:id="@+id/addson_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="addson_count"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addson_details_button"
+            app:layout_constraintEnd_toStartOf="@+id/addson_details_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addson_details_button" />
+
+        <Button
+            android:id="@+id/addson_details_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="onAddsonDetailsButtonClick"
+            android:text="Szczegóły"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/addson_count"
+            app:layout_constraintTop_toBottomOf="@+id/addon_count_text" />
+
+        <TextView
+            android:id="@+id/last_synchronized_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Data ostatniej synchronizacji:"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addson_details_button" />
+
+        <TextView
+            android:id="@+id/last_synchronized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="last_synchronized"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/synchronization_button"
+            app:layout_constraintEnd_toStartOf="@+id/synchronization_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/synchronization_button" />
+
+        <Button
+            android:id="@+id/synchronization_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:onClick="onSynchronizationButtonClick"
+            android:text="Synchronizacja"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/last_synchronized"
+            app:layout_constraintTop_toBottomOf="@+id/last_synchronized_text" />
+
+        <Button
+            android:id="@+id/clear_data_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="24dp"
+            android:onClick="onClearDataButtonClick"
+            android:text="Wyczyść dane"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/synchronization_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
